@@ -1,0 +1,120 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(
+    135deg,
+    #d2f8d2,
+    #a8e6cf
+  ); /* Pastel green gradient */
+  font-family: Arial, sans-serif;
+}
+
+.clock {
+  width: 80vmin;
+  height: 90vmin;
+  border-radius: 50%;
+  position: relative;
+  background: radial-gradient(
+    circle,
+    #e6ffe6,
+    #d2f8d2
+  ); /* Pastel green shades */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Title styling */
+.clock-title {
+  font-size: 3vmin;
+  color: #004d00; /* Dark green */
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.clock-face {
+  width: 90%;
+  height: 90%;
+  position: relative;
+}
+
+.hand {
+  width: 50%;
+  height: 0.3vmin;
+  background: #004d00; /* Dark green */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: right;
+  transform: rotate(90deg);
+  transition: all 0.05s;
+  transition-timing-function: cubic-bezier(0.4, 2.3, 0.3, 1);
+}
+
+.hour-hand {
+  width: 35%;
+  left: 15%;
+  height: 0.5vmin;
+  background: #004d00;
+}
+
+.minute-hand {
+  left: 1%;
+  height: 0.4vmin;
+  background: #004d00; /* Dark green */
+}
+
+.second-hand {
+  left: 1%;
+  height: 0.2vmin;
+  background: #007f00;
+}
+
+.center-circle {
+  width: 2vmin;
+  height: 2vmin;
+  background: #004d00; /* Dark green */
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.tick-mark {
+  position: absolute;
+  width: 2vmin;
+  height: 0.3vmin;
+  background: #004d00; /* Dark green */
+  top: 50%;
+  left: 50%;
+  transform-origin: 0% 50%;
+}
+
+/* Digital Clock Styling */
+.digital-clock {
+  font-size: 4vmin;
+  font-weight: bold;
+  color: #004d00; /* Dark green */
+  margin-top: 1rem;
+  text-align: center;
+}
+
+/* Date Display Styling */
+.date-display {
+  font-size: 3vmin;
+  color: #004d00; /* Dark green */
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
